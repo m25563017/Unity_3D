@@ -38,6 +38,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: "\u653B\u64CA"
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: "\u6B7B\u4EA1\u958B\u95DC"
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5966601380952694021}
   m_Solo: 0
@@ -167,13 +170,13 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5966601380952694021}
-    m_Position: {x: 310, y: 100, z: 0}
+    m_Position: {x: 310, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2316240518480576794}
     m_Position: {x: 310, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1346072509976331006}
-    m_Position: {x: 290, y: 300, z: 0}
+    m_Position: {x: 330, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8659741890162106868}
     m_Position: {x: 330, y: 10, z: 0}
@@ -186,7 +189,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 210, z: 0}
-  m_EntryPosition: {x: 40, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: -140, z: 0}
   m_ExitPosition: {x: 590, y: 220, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2578581418474841634}
@@ -278,25 +281,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: "\u6B7B\u4EA1\u958B\u95DC"
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: "\u653B\u64CA"
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: "\u53D7\u50B7"
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -371,6 +374,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: "\u53D7\u50B7"
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: "\u6B7B\u4EA1\u958B\u95DC"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2316240518480576794}
