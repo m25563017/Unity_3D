@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1507c4fc98ea7747b97df45af26dba5, type: 3}
   m_Name: "KULO\u7B2C\u4E00\u500B\u4EFB\u52D9"
   m_EditorClassIdentifier: 
-  dialougA: "\u4F60\u597D\u54C7~~\u5C0F\u72D7\u52FE"
-  dialougB: "\u8981\u4F86\u9EDE\u7F8E\u5473\u9AA8\u982D?\u6211\u77E5\u9053\u6211\u770B\u8D77\u4F86\u5F88\u597D\u5403\uFF0C\u4F46\u7F8E\u5473\u9AA8\u982D\u4E0D\u662F\u6211"
-  dialougC: "\u6EFE:)"
+  dialogA: "\u4F60\u597D\u54C7~~~\u5C0F\u72D7\u52FE~~~~~"
+  dialogB: "\u60F3\u8981\u751A\u9EBC\u6211\u90FD\u6C92\u6709:P"
+  dialogC: "\u6EFE\u5566:D"
   count: 100
   countCurrent: 0

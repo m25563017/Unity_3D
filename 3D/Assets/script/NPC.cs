@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class NPC : MonoBehaviour
 {
@@ -9,15 +10,38 @@ public class NPC : MonoBehaviour
     public GameObject dialog;
     [Header("對話內容")]
     public Text textContent;
+    [Header("對話間隔")]
+    public float interval = 0.1f;
+    [Header("對話者名稱")]
+    public Text textName;
 
     public bool playerInArea;
 
+    public enum NPCState
+    {
+        FirstDialog,Mission,Finish
+    }
+
+    public NPCState state=NPCState.FirstDialog;
+    /*private void Start()
+    {
+        StartCoroutine(Test());
+    }
+
+    private IEnumerator Test()
+    {
+        print("泥好~~");
+        yield return new WaitForSeconds(1.5f);
+        print("我是1.5秒後的啦哈哈哈哈");
+
+    }
+    */
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "小名")
         {
             playerInArea = true;
-            Dialog();
+         StartCoroutine(Dialog());
         }
     }
     private void OnTriggerExit(Collider other)
@@ -31,11 +55,40 @@ public class NPC : MonoBehaviour
     //        print("我是迴圈：" + i);
     //    }
     //}
-    private void Dialog()
+
+    private void StopDialog()
     {
-        for (int i = 0; i < data.dialougA.Length; i++)
+        dialog.SetActive(false);
+        StopAllCoroutines();
+    }
+
+   
+    
+    private IEnumerator Dialog()
+    {
+        dialog.SetActive(true);
+        textContent.text = "";
+        textName.text = name;
+        string dialogString = data.dialogB;
+
+        switch (state)
         {
-            print(data.dialougA[i]);
+            case NPCState.FirstDialog:
+                dialogString = data.dialogA;
+                break;
+            case NPCState.Mission:
+                dialogString = data.dialogB;
+                break;
+            case NPCState.Finish:
+                dialogString = data.dialogC;
+                break;
+           
+        }
+
+        for (int i = 0; i < dialogString.Length; i++)
+        {
+            textContent.text+=dialogString[i]+"";
+            yield return new WaitForSeconds(interval);
         }
     }
 }
